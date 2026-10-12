@@ -1,0 +1,10 @@
+# large / re-creatable
+tools/
+ghidra_proj/
+symbols/
+dist/
+work/
+resources/
+# only the player itself is tracked from the WMP 11 package
+unpacked/wmp11/*
+!unpacked/wmp11/wmp11/

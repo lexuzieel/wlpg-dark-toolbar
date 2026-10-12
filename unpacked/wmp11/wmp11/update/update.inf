@@ -1,0 +1,2361 @@
+
+[Version]
+Signature="$Windows NT$"
+LanguageType=0
+InstallPlatform=0
+CatalogFile=%SP_SHORT_TITLE%.cat
+NoRestorePoint = 1 
+
+
+
+
+
+
+
+
+
+
+MaxNtMinorVersionToUpdate=1
+MaxNtMajorVersionToUpdate=5
+NtBuildToUpdate=2600
+NtMinorVersionToUpdate=1
+NtMajorVersionToUpdate=5
+MaxNtBuildToUpdate=2600
+MinNtServicePackVersion=512
+MaxNtServicePackVersion=2304
+
+
+
+
+
+
+[ArchiveCatalogFilesOnly]
+%SP_SHORT_TITLE%.cat
+
+[ProductCatalogsToInstall]
+%SP_SHORT_TITLE%.cat, update\%SP_SHORT_TITLE%.cat
+
+[ProductInstall.CopyFilesAlways]
+
+
+
+CopyFiles=Copy.Help,Copy.INF.Others,Copy.INF.WMP,Copy.WMP,Copy.WMP.System,Copy.WMPNSS,Copy.WMPNSS.AUX,Copy.WMC20
+
+
+[ProductInstall.ReplaceFilesIfExist]
+CopyFiles=Copy.WMP.DllCache
+
+
+[DestinationDirs]
+
+
+
+
+
+
+
+
+
+
+Copy.WMPNSS=16422,%PRODUCT_DIR_NAME%
+Copy.WMPNSS.AUX=16422,%PRODUCT_NETWORK_SHARING_DIR_NAME%
+Copy.WMP=16422,%PRODUCT_DIR_NAME%
+Copy.WMP.System=11
+Copy.Help=18
+Copy.INF.Others=17
+Copy.INF.WMP=17
+Copy.WMC20=16422,%WMC2DIR_NAME%
+
+Copy.WMP.DllCache=65619
+
+[ProductInstall.GlobalRegistryChanges.Install]
+
+
+
+
+AddReg=Product.Add.Reg,V9Reg.Core,V9Reg.Core.AddOnly, V9Reg.Univ,WMP.ARP, V9.RegPUI, WMPAddReg.PUI,WMPAddReg.OSPUI,V9Reg.XP, WMP.SPAD, WMP.Reg.IEHard, Reg.WMDMHandler, Fraunhofer.Reg, HideReg.WMP10.Qfe, Hide.WMC20.Uninstall
+DelReg=Product.Del.Reg, Del.Reg.Setup,WMP.Del.V10, Del.Partner.Id,Del.WMP.ContextMenuHandler
+
+
+[ProductInstall.GlobalRegistryChanges.ReInstall]
+
+
+
+
+AddReg=Product.Add.Reg,V9Reg.Core,V9Reg.Core.AddOnly, V9Reg.Univ,WMP.ARP, V9.RegPUI, WMPAddReg.PUI,WMPAddReg.OSPUI,V9Reg.XP, WMP.SPAD, WMP.Reg.IEHard, Reg.WMDMHandler, Fraunhofer.Reg, HideReg.WMP10.Qfe
+DelReg=Product.Del.Reg, Del.Reg.Setup,WMP.Del.V10, Del.Partner.Id,Del.WMP.ContextMenuHandler
+
+
+[Del.Partner.Id]
+HKCU, "Software\Microsoft\MediaPlayer\Services", "partner"
+
+[HideReg.WMP10.Qfe]
+
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\KB888656, "SystemComponent", 0x00010001, 1
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\KB889858, "SystemComponent", 0x00010001, 1
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\KB892313, "SystemComponent", 0x00010001, 1
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\KB895572, "SystemComponent", 0x00010001, 1
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\KB907658, "SystemComponent", 0x00010001, 1
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\KB911565, "SystemComponent", 0x00010001, 1
+
+[Hide.WMC20.Uninstall]
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\WMCSetup, "SystemComponent", 0x00010001, 1
+
+[Del.WMP.ContextMenuHandler]
+HKCR,AIFFFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,ASFFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,ASXFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,AUFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,AVIFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,MIDFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,MPEGFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,M3UFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,MP3File\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,SoundRec\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,WAXFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,WMAFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,WMDFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,WMVFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,WPLFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,WVXFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,WMP.DVR-MSFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+
+
+HKCR,"SystemFileAssociations\.aif\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.asf\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.asx\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.au\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.avi\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.mid\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.mpg\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.m3u\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.mp3\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.wav\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.wax\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.wma\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.wmd\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.wmv\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.wpl\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.wma\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.aiff\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.aifc\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.dvr-ms\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.m1v\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.midi\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.mp2\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.mp2v\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.mpa\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.mpe\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.mpeg\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.mpv2\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.rmi\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.snd\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.wm\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.wmx\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+HKCR,"SystemFileAssociations\.wvx\shellex\ContextMenuHandlers\WMPBurnAudioCD"
+
+[Save.Reg.For.Uninstall]
+HKLM,%UpdateRegKey%\%US_Product_Name%\%SP_SHORT_TITLE%
+HKLM,%UpdateRegKey%\%US_Product_Name%\SP%SERVICE_PACK_NUMBER%\%SP_SHORT_TITLE%
+HKLM,"Software\Clients\Media\Windows Media Player
+HKLM,"%KEY_ACTIVESETUP%\%WMP_GUID%"
+HKLM,"%KEY_ACTIVESETUP%\>{22d6f312-b0f6-11d0-94ab-0080c74c7e95}"
+HKLM,"SOFTWARE\Microsoft\MediaPlayer\Player\Extensions"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlers\PlaySuperVideoCDMovieOnArrival"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\Handlers\MSPlaySuperVideoCDMovieOnArrival"
+
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlers\PlayVideoCDMovieOnArrival"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\Handlers\MSPlayVideoCDMovieOnArrival"
+
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlers\MTPMediaPlayerArrival"
+
+HKCR,CLSID\{D3984C13-C3CB-48E2-8BE5-5168340B4F35} 
+HKCR,Interface\{172E905D-80D9-4C2F-B7CE-2CCB771787A2}\NumMethods
+HKCR,Interface\{21D077C1-4BAA-11D3-BD45-00C04F6EA5AE}\NumMethods
+HKCR,Interface\{2A2E0DA3-19FA-4F82-BE18-CD7D7A3B977F}\NumMethods
+HKCR,Interface\{504F112E-77CC-4E3C-A073-5371B31D9B36}\NumMethods
+HKCR,Interface\{5AF0BEC1-46AA-11D3-BD45-00C04F6EA5AE}\NumMethods
+HKCR,Interface\{6FCAE13D-E492-4584-9C21-D2C052A2A33A}\NumMethods
+HKCR,Interface\{72F486B1-0D43-11D3-BD3F-00C04F6EA5AE}\NumMethods
+HKCR,Interface\{98BB02D4-ED74-43CC-AD6A-45888F2E0DCC}\NumMethods
+HKCR,Interface\{B2C2D18E-97AF-4B6A-A56B-2FFFF470FB81}\NumMethods
+
+
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\KB888656
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\KB889858
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\KB892313
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\KB895572
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\KB907658
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\KB911565
+
+HKCR,AIFFFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,ASFFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,ASXFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,AUFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,AVIFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,MIDFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,MPEGFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,M3UFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,MP3File\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,SoundRec\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,WAXFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,WMAFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,WMDFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,WMVFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,WPLFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,WVXFile\shellex\ContextMenuHandlers\WMPBurnAudioCD
+
+HKCR,SystemFileAssociations\.aif\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,SystemFileAssociations\.asf\shellex\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,SystemFileAssociations\.asx\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,SystemFileAssociations\.au\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,SystemFileAssociations\.avi\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,SystemFileAssociations\.mid\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,SystemFileAssociations\.mpg\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,SystemFileAssociations\.m3u\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,SystemFileAssociations\.mp3\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,SystemFileAssociations\.wav\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,SystemFileAssociations\.wax\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,SystemFileAssociations\.wma\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,SystemFileAssociations\.wmd\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,SystemFileAssociations\.wmv\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,SystemFileAssociations\.wpl\ContextMenuHandlers\WMPBurnAudioCD
+HKCR,SystemFileAssociations\.wma\ContextMenuHandlers\WMPBurnAudioCD
+
+HKCR,SoundRec
+HKCR,SoundRec\DefaultIcon
+HKCR,SoundRec\shell
+HKCR,SoundRec\shell\open
+HKCR,SoundRec\shell\open\command
+HKCR,SoundRec\shell\play
+
+HKCR,WMP.BurnCD\Shell\Burn
+HKCR,WMP.RipCD\Shell\Rip
+HKCR,WMP.PlayCD\Shell\Play
+
+HKLM,SOFTWARE\Microsoft\Active Setup\Installed Components\{22d6f312-b0f6-11d0-94ab-0080c74c7e95}
+
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\WMCSetup
+
+
+
+
+
+
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlers\MTPMediaPlayerArrival
+[Product.Add.Reg]
+HKLM,%UpdateRegKey%\%US_Product_Name%\%SP_SHORT_TITLE%, "PackageName",, %SP_TITLE%
+HKLM,%UpdateRegKey%\%US_Product_Name%\%SP_SHORT_TITLE%, "ARPLink",, %ARP_Link%%SP_SHORT_TITLE%
+HKLM,%UpdateRegKey%\%US_Product_Name%\%SP_SHORT_TITLE%, "InstallerName",, %Installer_Name%
+HKLM,%UpdateRegKey%\%US_Product_Name%\%SP_SHORT_TITLE%, "InstallerVersion",, %Installer_Version%
+
+
+
+
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\wmp11, "SystemComponent", 0x00010001, 1
+
+
+
+[Del.Reg.Setup]
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Windows Media Player
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\Handlers\MSWMDMHandler","InitCmdLine"
+
+[GlobalRegistryChanges.UnInstall]
+DelReg=Reg.Blocking.Del
+
+[UninstallSections]
+GlobalRegistryChanges, GlobalRegistryChanges.UnInstall
+ServicesToStopAndStart, ServicesToStopAndStart.Uninstall
+Reg.Blocking.Del, Reg.Blocking.Del.UnInstall
+
+[Reg.Blocking.Del.UnInstall]
+HKCR, "Software\Microsoft\WindowsMedia\Setup\BlockingRefCounts\App", "WindowsMediaPlayer"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Uninstall\Windows Media Player"
+HKLM, "Software\Microsoft\MediaPlayer\Setup", "WMP11RollbackTo"
+
+[SourceDisksNames]
+1=%PRODUCT_NAME%
+
+
+[SourceDisksFiles] 
+;
+;--- these are windows media player files
+;
+wmp.dll=1
+wmplayer.exe=1
+wmlaunch.exe=1
+asferror.dll=1
+wmpdxm.dll=1
+wmpasf.dll=1
+wmpshell.dll=1
+mpvis.dll=1
+wmploc.dll=1
+%LOCALIZATION_DLL_NAME%=1
+unregmp2.exe=1
+wmpband.dll=1
+wmp11.chm=1
+wmplayer.adm =1
+eula.txt=1
+wmpenc.exe=1
+wmpencen.dll=1
+wmpsrcwp.dll=1
+wmp11.inf=1
+l3codecp.acm=1
+wmpeffects.dll=1
+wmpmde.dll=1
+wmpps.dll=1
+setup_wm.exe=1
+
+wmdbexport.exe=1
+wmpshare.exe=1
+;
+;--- these are WMP NSS files
+;
+connectionmanager.xml=1 
+contentdirectory.xml=1 
+mediareceiverregistrar.xml=1 
+wmpnetwk.exe=1 
+wmpnscfg.exe=1 
+wmpnss_bw120.jpg=1 
+wmpnss_bw120.png=1 
+wmpnss_bw32.bmp=1 
+wmpnss_bw32.jpg=1 
+wmpnss_bw48.bmp=1 
+wmpnss_bw48.jpg=1 
+wmpnss_bw48.png=1 
+wmpnss_color120.jpg=1 
+wmpnss_color120.png=1 
+wmpnss_color32.bmp=1 
+wmpnss_color32.jpg=1 
+wmpnss_color48.bmp=1 
+wmpnss_color48.jpg=1 
+wmpnss_color48.png=1 
+wmpnssci.dll=1 
+
+
+;
+;These are the wmc2.0 files that we need to deprecate
+;
+wmccds.exe=1
+WMCCFG.exe=1
+WMCCPL.dll=1
+wmcsci.dll=1
+connectionmanager_stub.xml=1
+contentdirectory_stub.xml=1
+mediareceiverregistrar_stub.xml=1
+wmc_bw120.jpg=1
+wmc_bw32.jpg=1
+wmc_bw48.jpg=1
+wmc_color120.jpg=1
+wmc_color32.jpg=1
+wmc_color48.jpg=1
+wmc_bw120.png=1
+wmc_bw48.png=1
+wmc_color120.png=1
+wmc_color48.png=1
+wmc_bw32.bmp=1
+wmc_bw48.bmp=1
+wmc_color32.bmp=1
+wmc_color48.bmp=1
+
+
+
+;
+;this is the WGA dll
+;
+LegitLibM.dll=1
+
+[Copy.WMPNSS] 
+wmpnetwk.exe 
+wmpnscfg.exe 
+wmpnssci.dll 
+
+[Copy.WMPNSS.AUX] 
+connectionmanager.xml 
+contentdirectory.xml 
+mediareceiverregistrar.xml 
+wmpnss_bw120.jpg 
+wmpnss_bw120.png 
+wmpnss_bw32.bmp 
+wmpnss_bw32.jpg 
+wmpnss_bw48.bmp 
+wmpnss_bw48.jpg 
+wmpnss_bw48.png 
+wmpnss_color120.jpg 
+wmpnss_color120.png 
+wmpnss_color32.bmp 
+wmpnss_color32.jpg 
+wmpnss_color48.bmp 
+wmpnss_color48.jpg 
+wmpnss_color48.png 
+
+[Copy.WMP]
+wmplayer.exe
+setup_wm.exe
+wmlaunch.exe
+mpvis.dll
+wmpband.dll
+wmpenc.exe
+eula.txt
+wmdbexport.exe
+wmpshare.exe
+LegitLibM.dll
+
+[Copy.WMP.System]
+wmp.dll
+asferror.dll
+wmpdxm.dll
+wmpasf.dll
+wmpshell.dll
+wmploc.dll
+%LOCALIZATION_DLL_NAME%
+wmpencen.dll
+wmpsrcwp.dll
+l3codecp.acm
+wmpeffects.dll
+wmpmde.dll
+wmpps.dll
+
+
+[Copy.WMP.DllCache]
+wmp.dll
+wmplayer.exe
+wmlaunch.exe
+asferror.dll
+wmpdxm.dll
+wmpasf.dll
+wmpshell.dll
+mpvis.dll
+wmploc.dll
+%LOCALIZATION_DLL_NAME%
+unregmp2.exe
+wmpband.dll
+wmp11.chm
+wmplayer.adm 
+eula.txt
+wmpenc.exe
+wmpencen.dll
+wmpsrcwp.dll
+wmp11.inf
+l3codecp.acm
+wmpeffects.dll
+wmpmde.dll
+wmpps.dll
+setup_wm.exe
+
+wmdbexport.exe
+wmpshare.exe
+
+
+[Copy.WMC20]
+wmccds.exe 
+WMCCFG.exe 
+WMCCPL.dll 
+wmcsci.dll 
+connectionmanager.xml,connectionmanager_stub.xml
+contentdirectory.xml,contentdirectory_stub.xml
+mediareceiverregistrar.xml,mediareceiverregistrar_stub.xml
+wmc_bw120.jpg
+wmc_bw32.jpg
+wmc_bw48.jpg
+wmc_color120.jpg
+wmc_color32.jpg
+wmc_color48.jpg
+wmc_bw120.png
+wmc_bw48.png
+wmc_color120.png
+wmc_color48.png
+wmc_bw32.bmp
+wmc_bw48.bmp
+wmc_color32.bmp
+wmc_color48.bmp
+
+
+
+
+
+
+
+
+[Copy.Help]
+wmp11.chm,,,4
+
+
+[Copy.INF.Others]
+wmplayer.adm
+unregmp2.exe
+
+
+[Copy.INF.WMP]
+wmp11.inf
+
+
+[Configuration]
+UpdateRegKey            = %UpdateRegKey%\%US_Product_Name%
+;EventLogDllName         = spmsg.dll
+;CustomizationDll        = custdll.dll
+WaitTimeForServiceStop  = -1
+EventLogKeyName         = WindowsMedia
+InstallationType        = Hotfix
+InstallLogFileName      = %SP_SHORT_TITLE%.log
+UnInstallLogFileName    = %SP_SHORT_TITLE%Uninst.log
+UnInstallDirName        = $NtUninstall%SP_SHORT_TITLE%$
+
+
+[Strings]
+SP_DATE                 = "11/11/2004"
+
+
+
+SP_SHORT_TITLE          = "wmp11"
+
+SERVICE_PACK_NUMBER     = 0
+UpdateRegKey            = "SOFTWARE\Microsoft\Updates"
+
+US_PRODUCT_NAME    = "Windows Media Player 11" ; DO NOT LOCALIZE
+PRODUCT_NAME       = "Windows Media Player 11"
+SP_TITLE           = "Windows Media Player 11"
+PRODUCT_DIR_NAME   = "Windows Media Player"
+PRODUCT_NETWORK_SHARING_DIR_NAME   = "Windows Media Player\Network Sharing"
+
+;-------------------End Product specific strings
+;----Information for ARP, this is where the icon info will go when that is sorted out
+HelpLink                = http:
+URLInfoAbout            = http:
+ARP_Link                = "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\"
+
+
+MP2_FOLDER 	   = "Windows Media Player"
+KEY_DXMEDIA        = "Software\Microsoft\Multimedia\DirectXMedia"
+KEY_NETSHOW        = "Software\Microsoft\NetShow\Player"
+KEY_OLDFILETYPEDB  = "Software\Microsoft\Multimedia\MPlayer2"
+KEY_FILETYPEDB     = "Software\Microsoft\Multimedia\WMPlayer"
+KEY_WMP            = "SOFTWARE\Microsoft\MediaPlayer"
+KEY_WIN_CURVER     = "Software\Microsoft\Windows\CurrentVersion"
+KEY_ACTIVESETUP    = "SOFTWARE\Microsoft\Active Setup\Installed Components"
+
+KEY_WMPEXT         = "SOFTWARE\Microsoft\Multimedia\WMPlayer\Extensions"
+KEY_WMPMIME        = "SOFTWARE\Microsoft\Multimedia\WMPlayer\MIME Types"
+KEY_WMPSCHEME      = "SOFTWARE\Microsoft\Multimedia\WMPlayer\Schemes"
+TEXT_UAO           = "UserApprovedOwning"
+
+PATH_AUTOPLAY      = "Software\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers"
+
+DSHOW_GUID         = "{22d6f312-b0f6-11d0-94ab-0080c74c7e95}"
+
+MPLAYER2_MIMETYPE  = "video/x-ms-asf"
+
+WMP_GUID= "{6BF52A52-394A-11d3-B153-00C04F79FAA6}"
+NEW_INSTALLNAME= "Microsoft Windows Media Player"
+
+MPLAYER2_INSTALLNAME  = "MPlayer2"
+
+TYPE_AUDIO            = "*.wav;*.snd;*.au;*.aif;*.aifc;*.aiff;*.wma;*.mp3"
+TYPE_MIDI             = "*.mid;*.rmi;*.midi"
+TYPE_MPEG             = "*.mpeg;*.mpg;*.m1v;*.mp2;*.mpa;*.mpe;*.ifo;*.vob"
+TYPE_NETSHOW          = "*.asf;*.wm;*.wma;*.wmv;*.wmd"
+TYPE_PLAYLIST         = "*.asx;*.wax;*.m3u;*.wpl;*.wvx;*.wmx"
+
+TYPE_VIDEO            = "*.avi;*.wmv"
+TYPE_PICTURE            = "*.jpg;*.jpeg"
+
+TYPE_CDA              = "*.cda"
+
+WMP_DEVICE_AUTOPLAY="Windows Media Player Device Autoplay"
+
+WMC2DIR_NAME="Windows Media Connect 2"
+;;;;;;;--------------------------------------------
+;-- Only localize strings below this line
+;;;;;;--------------------------------------------
+Msft               = "Microsoft"
+LangTypeValue           = 0x09
+Language                = "ENU"
+
+LANGUAGE_WMP="EN"
+LCID="1033"
+
+FILE_AUDIO ="Audio file"
+FILE_MIDI ="MIDI file"
+FILE_MPEG ="Movie File (MPEG)"
+FILE_MP3 ="MP3 file"
+FILE_M3U="M3U file"
+FILE_NETSHOW ="Windows Media file"
+
+FILE_VIDEO ="Video file"
+FILE_PLAYLIST = "Media playlist"
+FILE_CDA = "CD Audio Track"
+FILE_PICTURE ="Picture file"
+
+
+DESCRIPTION_AIFF = "AIFF Format Sound"
+DESCRIPTION_AU = "AU Format Sound"
+DESCRIPTION_VIDEO = "Video Clip"
+DESCRIPTION_AUDIO = "Sound Clip"
+DESCRIPTION_MOVIE = "Movie Clip"
+DESCRIPTION_MIDI = "MIDI Sequence"
+DESCRIPTION_WAVE = "Wave Sound"
+
+
+PROGRAMFILES = "Program Files"
+
+
+MPLAYER2_HELPSHORTCUT_DISPLAYNAME = "NetShow Player Help"
+MPLAYER2_PLAYERSHORTCUT_DISPLAYNAME = "NetShow Player"
+
+NETSHOW2_PROGRAMFOLDER="Microsoft NetShow"
+NS_IE_PROGRAMFOLDER="Internet Explorer"
+
+PROMPT_UNINSTALL_COMPLETE = "Microsoft Windows Media Player rollback is now complete."
+CONFIRM_UNINSTALL="You are about to rollback Windows Media Player 11 to the original version of Windows Media Player that was part of your version of Windows.  Do you want to continue?"
+TITLE_UNINSTALL="Windows Media Player 11"
+
+WMP_TIP = "Adds or removes access to Windows Media Player from the Start menu and Desktop"
+
+WMP_NAME="Windows Media Player"
+STR_TRANSFER       = "Transfer files"
+
+TEXT_BURN= "Burn an audio CD"
+TEXT_RIP = "Rip music from CD"
+
+OPENTEXT="&Open"
+PLAYTEXT="&Play"
+CDDELUXE_NAME = "Deluxe CD Player"
+;Error Messages
+
+DISKNAME="Microsoft Windows Media Player Install"
+CABNAME="mswmp.cab"
+LOCALIZATION_DLL_NAME = "wmerror.dll"
+
+ARP_MP2 = "Windows Media Player 11"
+Installer_Name="Update.exe"
+Installer_Version="6.2.29.0"
+format_version="11.0.5721.5145" 
+;
+;if you are adding a call to an exe (except for regsvr32) then you will need to edit the RunProcessWithCorrectCommandLine function
+;in crescent\wmp\dev\setup\common\wmd_util.cpp
+;
+
+
+[ProcessesToRunBeforeArchive]
+"%sourcepath%\unregmp2.exe /PreInstall"
+"%sourcepath%\unregmp2.exe /RegUniv"
+
+
+"""%16422%\%WMC2DIR_NAME%\Wmccds.exe"" uninstall"
+"%systemroot%\system32\regsvr32.exe /s /u ""%16422%\%WMC2DIR_NAME%\wmccpl.dll"""
+"%systemroot%\system32\regsvr32.exe /s /u ""%16422%\%WMC2DIR_NAME%\wmcsci.dll"""
+"%sourcepath%\unregmp2.exe /HideWMC20Shortcut"
+
+
+[ProcessesToRunBeforeUninstall]
+"%11%\spupdsvc.exe /install ""Enables Installer to complete its scheduled post-reboot tasks"""
+
+""""%16422%\%PRODUCT_DIR_NAME%\WMPNetwk.exe""" uninstall"
+"%systemroot%\system32\regsvr32.exe /s /u """%16422%\%PRODUCT_DIR_NAME%\wmpnssci.dll""""
+
+
+"%systemroot%\inf\unregmp2.exe /ShowWMC20Shortcut"
+
+
+
+"%systemroot%\system32\regsvr32.exe /s  /u %systemroot%\system32\msdxm.ocx"
+"%systemroot%\system32\regsvr32.exe /s  /u %systemroot%\system32\wmp.dll"
+"%systemroot%\system32\regsvr32.exe /s  /u %systemroot%\system32\wmpshell.dll"
+"%systemroot%\system32\regsvr32.exe /s  /u %systemroot%\system32\wmpdxm.dll"
+"%systemroot%\system32\regsvr32.exe /s  /u %systemroot%\system32\wmpasf.dll"
+%systemroot%\system32\cmd.exe /C """""%16422%\%PRODUCT_DIR_NAME%\WMPEnc.exe"" /UnregServer"""
+"%systemroot%\system32\regsvr32.exe /s  /u %systemroot%\system32\wmpencen.dll"
+"%systemroot%\system32\regsvr32.exe /s  /u %systemroot%\system32\wmpsrcwp.dll"
+"%systemroot%\system32\regsvr32.exe /s  /u """%16422%\%PRODUCT_DIR_NAME%\mpvis.dll""""
+"%systemroot%\system32\regsvr32.exe /s  /u """%16422%\%PRODUCT_DIR_NAME%\wmpband.dll""""
+"%systemroot%\system32\regsvr32.exe /s  /u %systemroot%\system32\l3codecp.acm"
+"%systemroot%\system32\regsvr32.exe /s  /u %systemroot%\system32\wmpeffects.dll"
+"%systemroot%\system32\regsvr32.exe /s  /u %systemroot%\system32\wmpps.dll"
+"%systemroot%\inf\unregmp2.exe /UnRegExts"
+
+
+
+
+[ProcessesToRun]
+"%11%\spupdsvc.exe /install ""Enables Installer to complete its scheduled post-reboot tasks"""
+"%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\msdxm.ocx"
+"%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\wmp.dll"
+"%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\wmpshell.dll"
+"%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\wmpdxm.dll"
+"%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\wmpasf.dll"
+"%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\wmpencen.dll"
+"%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\wmpsrcwp.dll"
+"%systemroot%\system32\regsvr32.exe /s """%16422%\%PRODUCT_DIR_NAME%\mpvis.dll""""
+"%systemroot%\system32\regsvr32.exe /s """%16422%\%PRODUCT_DIR_NAME%\wmpband.dll""""
+"%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\l3codecp.acm"
+"%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\wmpeffects.dll"
+"%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\wmpps.dll"
+%systemroot%\system32\cmd.exe /C """""%16422%\%PRODUCT_DIR_NAME%\WMPEnc.exe"" /RegServer"""
+"%systemroot%\inf\unregmp2.exe /Shortcuts /RegExts /ObfuscateSyncPlaylists /MigrateWMC"
+
+"%systemroot%\system32\regsvr32.exe /s """%16422%\%PRODUCT_DIR_NAME%\wmpnssci.dll""""
+""""%16422%\%PRODUCT_DIR_NAME%\WMPNetwk.exe""" install"
+
+
+
+
+
+[ProcessesToRunAfterReboot.RebootNotRequired]
+"%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\msdxm.ocx"
+"%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\wmp.dll"
+"%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\wmpshell.dll"
+"%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\wmpdxm.dll"
+"%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\wmpasf.dll"
+"%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\wmpencen.dll"
+"%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\wmpsrcwp.dll"
+"%systemroot%\system32\regsvr32.exe /s """%16422%\%PRODUCT_DIR_NAME%\mpvis.dll""""
+"%systemroot%\system32\regsvr32.exe /s """%16422%\%PRODUCT_DIR_NAME%\wmpband.dll""""
+"%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\l3codecp.acm"
+"%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\wmpeffects.dll"
+"%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\wmpps.dll"
+%systemroot%\system32\cmd.exe /C """""%16422%\%PRODUCT_DIR_NAME%\WMPEnc.exe"" /RegServer"""
+"%systemroot%\inf\unregmp2.exe /Shortcuts /RegExts /ObfuscateSyncPlaylists /MigrateWMC"
+"%systemroot%\system32\regsvr32.exe /s """%16422%\%PRODUCT_DIR_NAME%\wmpnssci.dll""""
+""""%16422%\%PRODUCT_DIR_NAME%\WMPNetwk.exe""" install"
+
+
+
+
+
+[ProcessesToRunAfterUninstallReboot.RebootNotRequired]
+    "%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\msdxm.ocx"
+    "%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\wmpui.dll"
+    "%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\wmpcore.dll"
+    "%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\wmp.ocx"
+    "%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\wmpcd.dll"
+    "%systemroot%\system32\regsvr32.exe /s """"%16422%\%PRODUCT_DIR_NAME%\wmpband.dll"""""
+    "%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\wmp.dll"
+    "%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\wmpshell.dll"
+    "%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\wmpasf.dll"
+    "%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\wmpdxm.dll"
+    "%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\wmpencen.dll"
+    "%systemroot%\system32\regsvr32.exe /s %systemroot%\system32\wmpsrcwp.dll"
+    %systemroot%\system32\cmd.exe /C """""%16422%\%PRODUCT_DIR_NAME%\WMPEnc.exe"""" /RegServer"
+    "%systemroot%\inf\unregmp2.exe /UpdateWMP"
+
+
+"%systemroot%\system32\regsvr32.exe /s """"%16422%\%WMC2DIR_NAME%\wmcsci.dll"""""
+"%systemroot%\system32\regsvr32.exe /s """"%16422%\%WMC2DIR_NAME%\wmccpl.dll"""""
+%11%\cmd.exe /C """""%16422%\%WMC2DIR_NAME%\Wmccds.exe"""" install"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[V9Reg.Core]
+HKCR, "Applications\msdxm.ocx","NoOpenWith"
+
+HKLM,"%KEY_WMP%\Setup","FavoritesURLs",,"no"
+
+HKCR, "WMPlayer.OCX", "EditFlags", 1, 00,00,01,00
+HKCR, "WMPlayer.OCX.7", "EditFlags", 1, 00,00,01,00
+
+HKLM,"%KEY_WMP%","IEInstall",,"no"
+
+HKLM, "%KEY_WMP%\PlayerUpgrade", "EnableAutoUpgrade",2, "no"
+
+HKLM, "%KEY_WMPSCHEME%\vnd.ms.wmhtml", "Runtime",0x00010001,0x00000001
+
+
+HKLM, "%KEY_WMP%","MetadataTemplatesDir",,"%16422%\%MP2_FOLDER%\Templates"
+HKLM, "%KEY_WMP%","VisualizationsDir",,"%16422%\%MP2_FOLDER%\Visualizations"
+HKCU, Software\Microsoft\Keyboard\Native Media Players\WMP,ExePath,,"%16422%\%MP2_FOLDER%\wmplayer.exe"
+
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CD Burning\AudioBurnHandlers, {8dd448e6-c188-4aed-af92-44956194eb1f}, ,
+
+
+
+
+[V9Reg.Core.AddOnly]
+
+HKLM,"%KEY_WMP%\Player\Extensions\Types","1",,"%TYPE_AUDIO%"
+HKLM,"%KEY_WMP%\Player\Extensions\Types","2",,"%TYPE_MIDI%"
+HKLM,"%KEY_WMP%\Player\Extensions\Types","3",,"%TYPE_MPEG%"
+HKLM,"%KEY_WMP%\Player\Extensions\Types","4",,"%TYPE_PLAYLIST%"
+HKLM,"%KEY_WMP%\Player\Extensions\Types","5",,"%TYPE_NETSHOW%"
+HKLM,"%KEY_WMP%\Player\Extensions\Types","7",,"%TYPE_VIDEO%"
+HKLM,"%KEY_WMP%\Player\Extensions\Types","8",,"%TYPE_PICTURE%"
+
+
+HKLM,"%KEY_WMP%\Player\Extensions\Descriptions","1",,"%FILE_AUDIO% (%TYPE_AUDIO%)"
+HKLM,"%KEY_WMP%\Player\Extensions\Descriptions","2",,"%FILE_MIDI% (%TYPE_MIDI%)"
+HKLM,"%KEY_WMP%\Player\Extensions\Descriptions","3",,"%FILE_MPEG% (%TYPE_MPEG%)"
+HKLM,"%KEY_WMP%\Player\Extensions\Descriptions","4",,"%FILE_PLAYLIST% (%TYPE_PLAYLIST%)"
+HKLM,"%KEY_WMP%\Player\Extensions\Descriptions","5",,"%FILE_NETSHOW% (%TYPE_NETSHOW%)"
+HKLM,"%KEY_WMP%\Player\Extensions\Descriptions","7",,"%FILE_VIDEO% (%TYPE_VIDEO%)"
+HKLM,"%KEY_WMP%\Player\Extensions\Descriptions","8",,"%FILE_PICTURE% (%TYPE_PICTURE%)"
+
+
+HKLM,"%KEY_WMP%\Player\Extensions\MUIDescriptions","1",,"@%17%\unregmp2.exe,-9995"
+HKLM,"%KEY_WMP%\Player\Extensions\MUIDescriptions","2",,"@%17%\unregmp2.exe,-9993"
+HKLM,"%KEY_WMP%\Player\Extensions\MUIDescriptions","3",,"@%17%\unregmp2.exe,-10003"
+HKLM,"%KEY_WMP%\Player\Extensions\MUIDescriptions","4",,"@%17%\unregmp2.exe,-9922"
+HKLM,"%KEY_WMP%\Player\Extensions\MUIDescriptions","5",,"@%17%\unregmp2.exe,-9996"
+HKLM,"%KEY_WMP%\Player\Extensions\MUIDescriptions","7",,"@%17%\unregmp2.exe,-9997"
+HKLM,"%KEY_WMP%\Player\Extensions\MUIDescriptions","8",,"@%17%\unregmp2.exe,-10005"
+
+HKLM, %KEY_WMPEXT%\.aif, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.aifc, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.aiff, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.asf, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.asx, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.au, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.avi, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.bmp, "Permissions", 0x00010001, 0x00000001
+HKLM, %KEY_WMPEXT%\.cda, "Permissions", 0x00010001, 0x00000001
+HKLM, %KEY_WMPEXT%\.dat, "Permissions", 0x00010001, 0x00000001
+HKLM, %KEY_WMPEXT%\.gif, "Permissions", 0x00010001, 0x00000001
+HKLM, %KEY_WMPEXT%\.jfif, "Permissions", 0x00010001, 0x00000001
+HKLM, %KEY_WMPEXT%\.jpe, "Permissions", 0x00010001, 0x00000001
+HKLM, %KEY_WMPEXT%\.jpeg, "Permissions", 0x00010001, 0x00000001
+HKLM, %KEY_WMPEXT%\.jpg, "Permissions", 0x00010001, 0x00000001
+HKLM, %KEY_WMPEXT%\.m1v, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.m3u, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.mid, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.midi, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.mp2, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.mp2v, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.mp3, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.mpa, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.mpe, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.mpeg, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.mpg, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.mpv2, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.nsc, "Permissions", 0x00010001, 0x00000001
+HKLM, %KEY_WMPEXT%\.png, "Permissions", 0x00010001, 0x00000001
+HKLM, %KEY_WMPEXT%\.rmi, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.snd, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.swf, "Permissions", 0x00010001, 0x00000001
+HKLM, %KEY_WMPEXT%\.wav, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.wax, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.wm, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.wma, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.wmv, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.wmx, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.wpl, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.wvx, "Permissions", 0x00010001, 0x0000000f
+
+[V9Reg.Univ]
+
+HKCR, WMP.Device,,,%WMP_DEVICE_AUTOPLAY%
+HKCR, WMP.Device\CLSID,,,"{94E03510-31B9-47a0-A44E-E932AC86BB17}"
+
+HKCR, WMP.Device\CurVer,,,"WMP.Device.1"
+HKCR, WMP.Device.1,,,%WMP_DEVICE_AUTOPLAY%
+
+HKCR, WMP.Device.1\CLSID,,,"{94E03510-31B9-47a0-A44E-E932AC86BB17}"
+HKCR, CLSID\{94E03510-31B9-47a0-A44E-E932AC86BB17},,,%WMP_DEVICE_AUTOPLAY%
+HKCR, CLSID\{94E03510-31B9-47a0-A44E-E932AC86BB17},"AppID",,"{ED6BB178-B06A-47ad-98B3-6066E0CF0147}"
+
+HKCR, CLSID\{94E03510-31B9-47a0-A44E-E932AC86BB17}\LocalServer32,,,""""%16422%\%MP2_FOLDER%\wmlaunch.exe""""
+HKCR, CLSID\{94E03510-31B9-47a0-A44E-E932AC86BB17}\ProgID,,,"WMP.Device.1"
+HKCR, CLSID\{94E03510-31B9-47a0-A44E-E932AC86BB17}\VersionIndependentProgID,,,"WMP.Device"
+
+HKCR, AppID\{ED6BB178-B06A-47ad-98B3-6066E0CF0147},,,"Windows Media Player Launch"
+HKCR, AppID\{ED6BB178-B06A-47ad-98B3-6066E0CF0147},"RunAs",,"Interactive User"
+
+
+HKLM,%KEY_DXMEDIA%,".Prog",,"""%16422%\%MP2_FOLDER%\wmplayer.exe"""
+HKLM,%KEY_DXMEDIA%,"OCX.ocx",,"""%16422%\%MP2_FOLDER%\wmplayer.exe"""
+HKLM,"%KEY_WMP%","Installation Directory","","%16422%\%MP2_FOLDER%"
+HKLM,"%KEY_WMP%","Installation DirectoryLFN","","%16422%\%MP2_FOLDER%"
+
+HKLM,"%KEY_OLDFILETYPEDB%","Player.Path",, "%16422%\%MP2_FOLDER%\mplayer2.exe"
+
+HKLM,"%KEY_OLDFILETYPEDB%","Player.Name",, "mplayer2.exe"
+HKLM,"%KEY_OLDFILETYPEDB%","CLSID",,"%DSHOW_GUID%"
+
+HKLM,"Software\Microsoft\Multimedia\WMPlayer","Text.OpenVerb",,"%OPENTEXT%"
+HKLM,"Software\Microsoft\Multimedia\WMPlayer","Text.PlayVerb",,"%PLAYTEXT%"
+
+HKLM,"Software\Microsoft\Multimedia\WMPlayer","Player.Path",, "%16422%\%MP2_FOLDER%\wmplayer.exe"
+
+HKLM,"Software\Microsoft\Multimedia\WMPlayer","Player.Name",, "wmplayer.exe"
+HKLM,"Software\Microsoft\Multimedia\WMPlayer","Shell.Open",," /Open ""%L"""
+HKLM,"Software\Microsoft\Multimedia\WMPlayer","Shell.Play",," /Play ""%L"""
+HKLM,"Software\Microsoft\Multimedia\WMPlayer","StandardVerb",,"play"
+HKLM,"Software\Microsoft\Multimedia\WMPlayer","CLSID",,"{CD3AFA70-B84F-48f0-9393-7EDC34128127}"
+
+HKCR, "Applications\wmplayer.exe",,,%WMP_NAME%
+HKCR, "Applications\wmplayer.exe","OpenWithExclude",,QT:MOV
+HKCR, "Applications\wmplayer.exe","FriendlyAppName",,"%WMP_NAME%"
+HKCR, "Applications\wmplayer.exe\shell",,, "open"
+HKCR, "Applications\wmplayer.exe\shell\open",,, "%OPENTEXT%"
+HKCR, "Applications\wmplayer.exe\shell\play",,, "%PLAYTEXT%"
+
+HKCR, "SystemFileAssociations\audio\OpenWithList\wmplayer.exe",,,""
+HKCR, "SystemFileAssociations\video\OpenWithList\wmplayer.exe","OpenWithExclude",,QT:MOV
+
+HKCR, "SystemFileAssociations\audio\shellex\ContextMenuHandlers\WMPAddToPlaylist",,, "{F1B9284F-E9DC-4e68-9D7E-42362A59F0FD}"
+HKCR, "SystemFileAssociations\audio\shellex\ContextMenuHandlers\WMPAddToPlaylist","CheckSupportedTypes",, ""
+HKCR, "SystemFileAssociations\audio\shellex\ContextMenuHandlers\WMPPlayAsPlaylist",,,"{CE3FB1D1-02AE-4a5f-A6E9-D9F1B4073E6C}"
+HKCR, "SystemFileAssociations\audio\shellex\ContextMenuHandlers\WMPPlayAsPlaylist","CheckSupportedTypes",, ""
+
+HKCR, "SystemFileAssociations\video\shellex\ContextMenuHandlers\WMPAddToPlaylist",,, "{F1B9284F-E9DC-4e68-9D7E-42362A59F0FD}"
+HKCR, "SystemFileAssociations\video\shellex\ContextMenuHandlers\WMPAddToPlaylist","CheckSupportedTypes",, ""
+HKCR, "SystemFileAssociations\video\shellex\ContextMenuHandlers\WMPPlayAsPlaylist",,,"{CE3FB1D1-02AE-4a5f-A6E9-D9F1B4073E6C}"
+HKCR, "SystemFileAssociations\video\shellex\ContextMenuHandlers\WMPPlayAsPlaylist","CheckSupportedTypes",, ""
+
+HKCR, "SystemFileAssociations\Directory.Audio\shellex\ContextMenuHandlers\WMPAddToPlaylist",,, "{F1B9284F-E9DC-4e68-9D7E-42362A59F0FD}"
+HKCR, "SystemFileAssociations\Directory.Audio\shellex\ContextMenuHandlers\WMPPlayAsPlaylist",,,"{7D4734E6-047E-41e2-AEAA-E763B4739DC4}"
+
+HKCR, "SystemFileAssociations\Directory.Video\shellex\ContextMenuHandlers\WMPAddToPlaylist",,, "{F1B9284F-E9DC-4e68-9D7E-42362A59F0FD}"
+HKCR, "SystemFileAssociations\Directory.Video\shellex\ContextMenuHandlers\WMPPlayAsPlaylist",,,"{7D4734E6-047E-41e2-AEAA-E763B4739DC4}"
+
+
+; let autoplay know we like this event
+HKLM,"%PATH_AUTOPLAY%\EventHandlers\PlayCDAudioOnArrival",MSPlayCDAudioOnArrival,,""
+HKLM,"%PATH_AUTOPLAY%\EventHandlers\PlayCDAudioOnArrival",MSRipCDAudioOnArrival,,""
+; then setup the AutoPlay handler entry to point to our progids
+HKLM,"%PATH_AUTOPLAY%\Handlers\MSPlayCDAudioOnArrival","Action",,"@wmploc.dll,-6503"
+HKLM,"%PATH_AUTOPLAY%\Handlers\MSPlayCDAudioOnArrival","Provider",,"@wmploc.dll,-6502"
+HKLM,"%PATH_AUTOPLAY%\Handlers\MSPlayCDAudioOnArrival","InvokeProgID",,"WMP.AudioCD"
+HKLM,"%PATH_AUTOPLAY%\Handlers\MSPlayCDAudioOnArrival","InvokeVerb",,"play"
+
+HKLM,"%PATH_AUTOPLAY%\Handlers\MSRipCDAudioOnArrival","Action",,"@wmploc.dll,-6506"
+HKLM,"%PATH_AUTOPLAY%\Handlers\MSRipCDAudioOnArrival","Provider",,"@wmploc.dll,-6502"
+HKLM,"%PATH_AUTOPLAY%\Handlers\MSRipCDAudioOnArrival","InvokeProgID",,"WMP.RipCD"
+HKLM,"%PATH_AUTOPLAY%\Handlers\MSRipCDAudioOnArrival","InvokeVerb",,"Rip"
+
+; let autoplay know we like this event
+HKLM,"%PATH_AUTOPLAY%\EventHandlers\PlayDVDMovieOnArrival",MSPlayDVDMovieOnArrival,,""
+; then setup the AutoPlay handler entry to point to our progid
+HKLM,"%PATH_AUTOPLAY%\Handlers\MSPlayDVDMovieOnArrival","Action",,"@wmploc.dll,-6504"
+HKLM,"%PATH_AUTOPLAY%\Handlers\MSPlayDVDMovieOnArrival","Provider",,"@wmploc.dll,-6502"
+HKLM,"%PATH_AUTOPLAY%\Handlers\MSPlayDVDMovieOnArrival","InvokeProgID",,"WMP.DVD"
+HKLM,"%PATH_AUTOPLAY%\Handlers\MSPlayDVDMovieOnArrival","InvokeVerb",,"play"
+
+HKCR, WMP.PlayMedia\shell\play\DropTarget, "clsid",,"{CE3FB1D1-02AE-4a5f-A6E9-D9F1B4073E6C}"
+
+HKLM, %PATH_AUTOPLAY%\EventHandlers\PlayVideoFilesOnArrival, "MSOpenFolder",,""
+
+HKLM, %PATH_AUTOPLAY%\EventHandlers\PlayMusicFilesOnArrival, "MSOpenFolder",,""
+
+HKLM, %PATH_AUTOPLAY%\Handlers\MSPlayMediaOnArrival, "Action",,"@wmploc.dll,-1800"
+HKLM, %PATH_AUTOPLAY%\Handlers\MSPlayMediaOnArrival, "Provider",,"@wmploc.dll,-6502"
+HKLM, %PATH_AUTOPLAY%\Handlers\MSPlayMediaOnArrival, "InvokeProgid",,"WMP.PlayMedia"
+HKLM, %PATH_AUTOPLAY%\Handlers\MSPlayMediaOnArrival, "InvokeVerb",,"play"
+
+HKLM, %PATH_AUTOPLAY%\Handlers\MSWMPBurnCDOnArrival, "Action",,"@wmploc.dll,-6505"
+HKLM, %PATH_AUTOPLAY%\Handlers\MSWMPBurnCDOnArrival, "Provider",,"@wmploc.dll,-6502"
+HKLM, %PATH_AUTOPLAY%\Handlers\MSWMPBurnCDOnArrival, "InvokeProgid",,"WMP.BurnCD"
+HKLM, %PATH_AUTOPLAY%\Handlers\MSWMPBurnCDOnArrival, "InvokeVerb",,"Burn"
+
+HKCR, WMP.BurnCD\Shell\Burn, ,,"%TEXT_BURN%"
+HKCR, WMP.BurnCD\Shell\Burn, MUIVerb,,"@wmploc.dll,-6502"
+HKCR, WMP.RipCD\Shell\Rip, ,,"%TEXT_RIP%"
+HKCR, WMP.RipCD\Shell\Rip, MUIVerb,,"@wmploc.dll,-6506"
+
+HKCR, WMP.AudioCD\Shell\Play,,,"%PLAYTEXT%"
+HKCR, WMP.AudioCD\Shell\Play, MUIVerb,,"@wmploc.dll,-6503"
+
+HKCR, WMP.PlayCD\Shell\Play,,,"%PLAYTEXT%"
+HKCR, WMP.PlayCD\Shell\Play, MUIVerb,,"@wmploc.dll,-6503"
+
+HKCR, WMP.PlayMedia\Shell\Play,,,"%PLAYTEXT%"
+HKCR, WMP.PlayMedia\Shell\Play, MUIVerb,,"@wmploc.dll,-1800"
+
+HKCR, WMP.DVD\Shell\Play,,,"%PLAYTEXT%"
+HKCR, WMP.DVD\Shell\Play, MUIVerb,,"@wmploc.dll,-6504"
+
+HKCR, "Applications\wmplayer.exe\DefaultIcon",,, "%16422%\%MP2_FOLDER%\wmplayer.exe,-120"
+HKCR, "Applications\wmplayer.exe\shell\open\command",,, "%16422%\%MP2_FOLDER%\wmplayer.exe /Open ""%L"""
+HKCR, "Applications\wmplayer.exe\shell\play\command",,, "%16422%\%MP2_FOLDER%\wmplayer.exe /Play ""%L"""
+HKCR, "SystemFileAssociations\audio\DefaultIcon",,, "%16422%\%MP2_FOLDER%\wmplayer.exe,-120"
+HKCR, "SystemFileAssociations\video\DefaultIcon",,, "%16422%\%MP2_FOLDER%\wmplayer.exe,-120"
+HKLM,"%PATH_AUTOPLAY%\Handlers\MSPlayCDAudioOnArrival","DefaultIcon",,"%16422%\%MP2_FOLDER%\wmplayer.exe,0"
+HKLM,"%PATH_AUTOPLAY%\Handlers\MSRipCDAudioOnArrival","DefaultIcon",,"%16422%\%MP2_FOLDER%\wmplayer.exe,0"
+HKLM,"%PATH_AUTOPLAY%\Handlers\MSPlayDVDMovieOnArrival","DefaultIcon",,"%16422%\%MP2_FOLDER%\wmplayer.exe,0"
+HKLM, %PATH_AUTOPLAY%\Handlers\MSPlayMediaOnArrival, "DefaultIcon",,"%16422%\%MP2_FOLDER%\wmplayer.exe,0"
+HKLM, %PATH_AUTOPLAY%\Handlers\MSWMPBurnCDOnArrival, "DefaultIcon",,"%16422%\%MP2_FOLDER%\wmplayer.exe,0"
+HKCR, WMP.BurnCD\Shell\Burn\Command, ,,"""%16422%\%MP2_FOLDER%\wmplayer.exe"" /prefetch:3 /Task:CDWrite /Device:""%L"""
+HKCR, WMP.RipCD\Shell\Rip\Command, ,,"""%16422%\%MP2_FOLDER%\wmplayer.exe"" /prefetch:3 /RipAudioCD ""%L"""
+
+HKLM,"%KEY_WIN_CURVER%\App Paths\wmplayer.exe",,,"%16422%\%MP2_FOLDER%\wmplayer.exe"
+HKLM,"%KEY_WIN_CURVER%\App Paths\wmplayer.exe","Path",,"%16422%\%MP2_FOLDER%"
+
+HKLM, "%KEY_WMP%","SkinsDir",,"%16422%\%MP2_FOLDER%\Skins"
+
+[V9Reg.Core.AddOnly]
+
+HKLM,"%KEY_WMP%\Player\Extensions\Types","1",,"%TYPE_AUDIO%"
+HKLM,"%KEY_WMP%\Player\Extensions\Types","2",,"%TYPE_MIDI%"
+HKLM,"%KEY_WMP%\Player\Extensions\Types","3",,"%TYPE_MPEG%"
+HKLM,"%KEY_WMP%\Player\Extensions\Types","4",,"%TYPE_PLAYLIST%"
+HKLM,"%KEY_WMP%\Player\Extensions\Types","5",,"%TYPE_NETSHOW%"
+HKLM,"%KEY_WMP%\Player\Extensions\Types","7",,"%TYPE_VIDEO%"
+HKLM,"%KEY_WMP%\Player\Extensions\Types","8",,"%TYPE_PICTURE%"
+
+
+HKLM,"%KEY_WMP%\Player\Extensions\Descriptions","1",,"%FILE_AUDIO% (%TYPE_AUDIO%)"
+HKLM,"%KEY_WMP%\Player\Extensions\Descriptions","2",,"%FILE_MIDI% (%TYPE_MIDI%)"
+HKLM,"%KEY_WMP%\Player\Extensions\Descriptions","3",,"%FILE_MPEG% (%TYPE_MPEG%)"
+HKLM,"%KEY_WMP%\Player\Extensions\Descriptions","4",,"%FILE_PLAYLIST% (%TYPE_PLAYLIST%)"
+HKLM,"%KEY_WMP%\Player\Extensions\Descriptions","5",,"%FILE_NETSHOW% (%TYPE_NETSHOW%)"
+HKLM,"%KEY_WMP%\Player\Extensions\Descriptions","7",,"%FILE_VIDEO% (%TYPE_VIDEO%)"
+HKLM,"%KEY_WMP%\Player\Extensions\Descriptions","8",,"%FILE_PICTURE% (%TYPE_PICTURE%)"
+
+
+HKLM,"%KEY_WMP%\Player\Extensions\MUIDescriptions","1",,"@%17%\unregmp2.exe,-9995"
+HKLM,"%KEY_WMP%\Player\Extensions\MUIDescriptions","2",,"@%17%\unregmp2.exe,-9993"
+HKLM,"%KEY_WMP%\Player\Extensions\MUIDescriptions","3",,"@%17%\unregmp2.exe,-10003"
+HKLM,"%KEY_WMP%\Player\Extensions\MUIDescriptions","4",,"@%17%\unregmp2.exe,-9922"
+HKLM,"%KEY_WMP%\Player\Extensions\MUIDescriptions","5",,"@%17%\unregmp2.exe,-9996"
+HKLM,"%KEY_WMP%\Player\Extensions\MUIDescriptions","7",,"@%17%\unregmp2.exe,-9997"
+HKLM,"%KEY_WMP%\Player\Extensions\MUIDescriptions","8",,"@%17%\unregmp2.exe,-10005"
+
+HKLM, %KEY_WMPEXT%\.aif, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.aifc, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.aiff, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.asf, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.asx, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.au, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.avi, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.bmp, "Permissions", 0x00010001, 0x00000001
+HKLM, %KEY_WMPEXT%\.cda, "Permissions", 0x00010001, 0x00000001
+HKLM, %KEY_WMPEXT%\.dat, "Permissions", 0x00010001, 0x00000001
+HKLM, %KEY_WMPEXT%\.gif, "Permissions", 0x00010001, 0x00000001
+HKLM, %KEY_WMPEXT%\.jfif, "Permissions", 0x00010001, 0x00000001
+HKLM, %KEY_WMPEXT%\.jpe, "Permissions", 0x00010001, 0x00000001
+HKLM, %KEY_WMPEXT%\.jpeg, "Permissions", 0x00010001, 0x00000001
+HKLM, %KEY_WMPEXT%\.jpg, "Permissions", 0x00010001, 0x00000001
+HKLM, %KEY_WMPEXT%\.m1v, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.m3u, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.mid, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.midi, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.mp2, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.mp2v, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.mp3, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.mpa, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.mpe, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.mpeg, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.mpg, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.mpv2, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.nsc, "Permissions", 0x00010001, 0x00000001
+HKLM, %KEY_WMPEXT%\.png, "Permissions", 0x00010001, 0x00000001
+HKLM, %KEY_WMPEXT%\.rmi, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.snd, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.swf, "Permissions", 0x00010001, 0x00000001
+HKLM, %KEY_WMPEXT%\.wav, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.wax, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.wm, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.wma, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.wmv, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.wmx, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.wpl, "Permissions", 0x00010001, 0x0000000f
+HKLM, %KEY_WMPEXT%\.wvx, "Permissions", 0x00010001, 0x0000000f
+
+
+[V9.RegPUI]
+HKLM,"%KEY_ACTIVESETUP%\%WMP_GUID%",,,"%NEW_INSTALLNAME%"
+HKLM,"%KEY_ACTIVESETUP%\%WMP_GUID%","ComponentID",,"%NEW_INSTALLNAME%"
+HKLM,"%KEY_ACTIVESETUP%\%WMP_GUID%","DontAsk",0x00010001,2
+HKLM,"%KEY_ACTIVESETUP%\%WMP_GUID%","Locale",,"%LANGUAGE%"
+HKLM,"%KEY_ACTIVESETUP%\%WMP_GUID%","StubPath",,"rundll32.exe advpack.dll,LaunchINFSection %17%\wmp11.inf,PerUserStub"
+HKLM,"%KEY_ACTIVESETUP%\%WMP_GUID%","IsInstalled",0x00010001,1
+
+HKLM,"%KEY_ACTIVESETUP%\%DSHOW_GUID%","DontAsk",0x00010001,2
+HKLM,"%KEY_ACTIVESETUP%\%DSHOW_GUID%","Locale",,"%LANGUAGE%"
+
+HKLM,"%KEY_ACTIVESETUP%\%DSHOW_GUID%","StubPath"
+HKLM,"%KEY_ACTIVESETUP%\%DSHOW_GUID%","IsInstalled",0x00010001,1
+
+HKLM,"%KEY_ACTIVESETUP%\>%DSHOW_GUID%",,0x2,"%NEW_INSTALLNAME%"
+HKLM,"%KEY_ACTIVESETUP%\>%DSHOW_GUID%","ComponentID",0x2,"WMPACCESS"
+HKLM,"%KEY_ACTIVESETUP%\>%DSHOW_GUID%","DontAsk",0x00010001,2
+HKLM,"%KEY_ACTIVESETUP%\>%DSHOW_GUID%","IsInstalled",0x00010003,0
+HKLM,"%KEY_ACTIVESETUP%\>%DSHOW_GUID%","Locale",,"*"
+HKLM,"%KEY_ACTIVESETUP%\>%DSHOW_GUID%","StubPath",0x2,"%17%\unregmp2.exe /ShowWMP"
+
+
+[WMPAddReg.PUI]
+HKCU,Software\Microsoft\Keyboard\Native Media Players\WMP,AppName,,"%WMP_NAME%"
+HKCU,Software\Microsoft\Keyboard\Native Media Players\WMP,ExePath,,"%16422%\%MP2_FOLDER%\wmplayer.exe"
+HKCU, "Software\Microsoft\MediaPlayer\Preferences", "AcceptedPrivacyStatement",0x00010001,0
+HKCU, "Software\Microsoft\MediaPlayer\Preferences", "UpgradeCheckFrequency", 1, 01,00,00,00
+
+[WMPAddReg.OSPUI]
+HKCU,"%KEY_ACTIVESETUP%\%WMP_GUID%","Locale",,"%LANGUAGE%"
+
+[V9Reg.XP]
+HKCR, "Applications\wmplayer.exe","FriendlyAppName",,"@wmploc.dll,-102"
+
+
+[WMP.SPAD]
+HKLM,"Software\Clients\Media\Windows Media Player",,,"%WMP_NAME%"
+HKLM,"Software\Clients\Media\Windows Media Player",LocalizedString,,"@%17%\unregmp2.exe,-4"
+HKLM,"Software\Clients\Media\Windows Media Player\InstallName","OCName",,"WMPOCM"
+
+HKLM,"Software\Clients\Media\Windows Media Player\InstallInfo","IconsVisible",0x00010003,0x1
+HKLM,"Software\Clients\Media\Windows Media Player\InstallInfo","HideIconsCommand",,"%17%\unregmp2.exe /HideWMP /SetShowState"
+HKLM,"Software\Clients\Media\Windows Media Player\InstallInfo","ShowIconsCommand",,"%17%\unregmp2.exe /ShowWMP /SetShowState"
+HKLM,"Software\Clients\Media\Windows Media Player\InstallInfo","ReinstallCommand",,"%17%\unregmp2.exe /SetWMPAsDefault"
+HKLM,"Software\Clients\Media\Windows Media Player\shell\open\command",,,"%16422%\%MP2_FOLDER%\wmplayer.exe"
+
+[WMP.Reg.IEHard]
+HKLM, "SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BEHAVIORS", "WMPlayer.exe", 0x00010001, 1
+HKLM, "SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_DISABLE_MK_PROTOCOL", "WMPlayer.exe", 0x00010001, 1
+HKLM, "SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN", "WMPlayer.exe", 0x00010001, 1
+HKLM, "SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING", "WMPlayer.exe", 0x00010001, 1
+HKLM, "SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING", "WMPlayer.exe", 0x00010001, 1
+HKLM, "SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_OBJECT_CACHING", "WMPlayer.exe", 0x00010001, 1
+HKLM, "SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WEBOC_POPUPMANAGEMENT", "WMPlayer.exe", 0x00010001, 1
+HKLM, "SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WINDOW_RESTRICTIONS", "WMPlayer.exe", 0x00010001, 1
+HKLM, "SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ZONE_ELEVATION", "WMPlayer.exe", 0x00010001, 1
+HKLM, "SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SECURITYBAND", "WMPlayer.exe", 0x00010001, 1
+HKLM, "SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ADDON_MANAGEMENT", "WMPlayer.exe", 0x00010001, 1
+HKLM, "SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL", "WMPlayer.exe", 0x00010001, 1
+HKLM, "SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_VALIDATE_NAVIGATE_URL", "WMPlayer.exe", 0x00010001, 1
+HKLM, "SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_FILEDOWNLOAD", "WMPlayer.exe", 0x00010001, 1
+HKLM, "SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_PROTOCOL_LOCKDOWN", "WMPlayer.exe", 0x00010001, 1
+HKLM, "SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_HTTP_USERNAME_PASSWORD_DISABLE", "WMPlayer.exe", 0x00010001, 1
+HKLM, "SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SAFE_BINDTOOBJECT", "WMPlayer.exe", 0x00010001, 1
+HKLM, "SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_UNC_SAVEDFILECHECK", "WMPlayer.exe", 0x00010001, 1
+
+[Reg.WMDMHandler]
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\Handlers\MSWMDMHandler","Action",,"@wmploc.dll,-29300"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\Handlers\MSWMDMHandler","Provider",,"@wmploc.dll,-6502"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\Handlers\MSWMDMHandler","DefaultIcon",0x00020000,"%ProgramFiles%\Windows Media Player\wmplayer.exe,0"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\Handlers\MSWMDMHandler","ProgID",,"WMP.Device"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\Handlers\MSWMDMHandler","CLSIDForCancel",,"{91778246-9BE4-4713-A651-E833B853CC30}"
+
+[Fraunhofer.Reg]
+HKLM, "SOFTWARE\Microsoft\MediaPlayer\Settings\MP3Encoding", "LowRate", 0x00010001, 128000
+HKLM, "SOFTWARE\Microsoft\MediaPlayer\Settings\MP3Encoding", "MediumRate", 0x00010001, 192000
+HKLM, "SOFTWARE\Microsoft\MediaPlayer\Settings\MP3Encoding", "MediumHighRate", 0x00010001, 256000
+HKLM, "SOFTWARE\Microsoft\MediaPlayer\Settings\MP3Encoding", "HighRate", 0x00010001, 320000
+HKLM, "SOFTWARE\Microsoft\MediaPlayer\Settings\MP3Encoding", "PreferredCodecName", , "mp3"
+HKLM, "SOFTWARE\Microsoft\MediaPlayer\Settings\MP3Encoding", "PreferredCodecPath", , "%11%\l3codecp.acm"
+
+[WMP.ARP]
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Uninstall\Windows Media Player","DisplayName",,"%ARP_MP2%"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Uninstall\Windows Media Player","UninstallString",,"""%16422%\%MP2_FOLDER%\Setup_wm.exe"" /Uninstall"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Uninstall\Windows Media Player", "DisplayIcon",,%16422%\%MP2_FOLDER%\wmplayer.exe
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Uninstall\Windows Media Player", "ParentKeyName",,""
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Uninstall\Windows Media Player", "ParentDisplayName",,""
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Uninstall\Windows Media Player", "NoModify",0x00010001,1
+HKCR, "Software\Microsoft\WindowsMedia\Setup\BlockingRefCounts\App", "WindowsMediaPlayer",, "%ARP_MP2%"
+HKCR, "Software\Microsoft\WindowsMedia\Setup\BlockingRefCounts\Descriptor", "WindowsMediaPlayer",, "%ARP_MP2%"
+HKCR, "Software\Microsoft\WindowsMedia\Setup\BlockingRefCounts\Version", "WindowsMediaPlayer",, "%format_version%"
+
+[WMP.Del.V10]
+HKCR,CLSID\{D3984C13-C3CB-48E2-8BE5-5168340B4F35} 
+HKCR,Interface\{172E905D-80D9-4C2F-B7CE-2CCB771787A2}\NumMethods
+HKCR,Interface\{21D077C1-4BAA-11D3-BD45-00C04F6EA5AE}\NumMethods
+HKCR,Interface\{2A2E0DA3-19FA-4F82-BE18-CD7D7A3B977F}\NumMethods
+HKCR,Interface\{504F112E-77CC-4E3C-A073-5371B31D9B36}\NumMethods
+HKCR,Interface\{5AF0BEC1-46AA-11D3-BD45-00C04F6EA5AE}\NumMethods
+HKCR,Interface\{6FCAE13D-E492-4584-9C21-D2C052A2A33A}\NumMethods
+HKCR,Interface\{72F486B1-0D43-11D3-BD3F-00C04F6EA5AE}\NumMethods
+HKCR,Interface\{98BB02D4-ED74-43CC-AD6A-45888F2E0DCC}\NumMethods
+HKCR,Interface\{B2C2D18E-97AF-4B6A-A56B-2FFFF470FB81}\NumMethods
+
+
