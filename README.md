@@ -12,7 +12,14 @@ After:
 
 ## Build it yourself
 
-Get the original `Windows Live Photo Gallery.msi` and run:
+Get the original installer from the Internet Archive:
+
+- [Windows Live Photo Gallery 2008](https://archive.org/details/windows-live-photo-gallery) -
+  `Windows Live Photo Gallery.msi`, SHA-256
+  `c273c4e5f99cc1bab911b4e5373201739e33c00425131cfc16f77351bfb04c32`.
+  The same page has `SQLServerCE31-EN.msi`, the SQL Server Compact 3.1 runtime.
+
+Then run:
 
     .\build.ps1 -Msi "C:\path\to\Windows Live Photo Gallery.msi" -Out C:\wlpg-dark
 
