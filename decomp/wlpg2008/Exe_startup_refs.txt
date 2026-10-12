@@ -1,0 +1,16 @@
+// program: WLXPhotoGallery.exe
+01001bb6 FUN_01001bb6  RegOpenKeyExW@01001c63  RegQueryValueExW@01001c96  GetProcAddress@01001c30  GetProcAddress@01001d94  LoadLibraryW@01001d59
+01001e4a FUN_01001e4a  LoadLibraryExW@01001e6a
+01001ed2 FUN_01001ed2  ShellExecuteW@01001fd2
+0100268b FUN_0100268b  LoadLibraryW@01002862
+010028d4 FUN_010028d4  GetProcAddress@01002927  GetProcAddress@0100295c
+01002a45 FUN_01002a45  LoadLibraryExW@01002a77
+01002b2d FUN_01002b2d  RegOpenKeyExW@01002b6e
+01002bc2 FUN_01002bc2  MsiLocateComponentW@01002c02
+01002da5 FUN_01002da5  ShellExecuteExW@01002df2
+01002e1d FUN_01002e1d  RegQueryValueExW@01002e42
+01003774 FUN_01003774  LoadLibraryW@0100377a
+010056d3 FUN_010056d3  LoadLibraryW@01005702
+01006ce4 FUN_01006ce4  GetVersionExA@01006d34
+01006de0 __InitializeThunkPool  GetProcAddress@01006e17  GetProcAddress@01006e24
+01006f98 MSI.DLL::MsiLocateComponentW  MsiLocateComponentW@01006f98

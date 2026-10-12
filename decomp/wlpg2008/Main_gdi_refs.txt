@@ -1,0 +1,72 @@
+// program: WLXPhotoLibraryMain.dll
+63cb90a9 FUN_63cb90a9  GetSysColor@63cb90b4
+63cba153 FUN_63cba153  GetSysColor@63cba15e
+63cc38f3 FUN_63cc38f3  GetSysColor@63cc3908  GetSysColor@63cc3931  GetSysColor@63cc3952  GetSysColor@63cc3981
+63cc39b7 FUN_63cc39b7  GetSysColor@63cc39c4
+63cc7030 FUN_63cc7030  GetSysColor@63cc70e5  GetSysColor@63cc710c  GetSysColor@63cc7166  GetSysColor@63cc713c
+63ce01d2 FUN_63ce01d2  GetSysColor@63ce020b  GetSysColor@63ce0212  GetSysColor@63ce0241  GetSysColor@63ce0247  GetSysColor@63ce0255  GetSysColor@63ce026d  GetSysColor@63ce028e
+63ce029c FUN_63ce029c  OpenThemeData@63ce02a7
+63ce8c8a FUN_63ce8c8a  GetSysColor@63ce8d74
+63ceccde FUN_63ceccde  GetSysColor@63cecdd8  GetSysColor@63cece78  GetSysColor@63cecf34
+63cf1152 FUN_63cf1152  GetSysColor@63cf1262  GetSysColorBrush@63cf1274  SetTextColor@63cf126c
+63cf1a19 FUN_63cf1a19  FillRect@63cf1a8c  CreateSolidBrush@63cf1a42
+63d2475d FUN_63d2475d  GetSysColor@63d2483d
+63d256bd FUN_63d256bd  GetSysColor@63d257e0
+63d28a95 FUN_63d28a95  GetSysColor@63d28b01
+63d296e7 FUN_63d296e7  GetSysColor@63d29722
+63d2983e FUN_63d2983e  GetSysColor@63d29871  GetSysColor@63d29964
+63d2b088 FUN_63d2b088  IsAppThemed@63d2b263
+63d2bed5 FUN_63d2bed5  GetSysColor@63d2bef5
+63d2e7f1 FUN_63d2e7f1  GetSysColor@63d2e825
+63d300c2 FUN_63d300c2  GetSysColor@63d30113
+63d33727 FUN_63d33727  GetSysColor@63d337c4
+63d33c56 FUN_63d33c56  GetSysColor@63d33c72
+63d3b058 FUN_63d3b058  GetSysColor@63d3b5d9
+63d408e0 FUN_63d408e0  GetSysColor@63d408e5
+63d42b66 FUN_63d42b66  GetSysColor@63d42b82  GetSysColor@63d42baa  GetSysColor@63d42bcd  GetSysColor@63d42c05  GetSysColor@63d43724
+63d4668a FUN_63d4668a  GetSysColor@63d4671a
+63d46fd0 FUN_63d46fd0  GetSysColor@63d46fdb
+63d470af FUN_63d470af  GetSysColor@63d4716e
+63d48964 FUN_63d48964  DrawTextW@63d4899d  DrawTextW@63d48a31
+63d48f0d FUN_63d48f0d  GetSysColor@63d494b1
+63d495ca FUN_63d495ca  GetSysColor@63d4964d
+63d49b78 FUN_63d49b78  GetSysColor@63d49b83
+63d4a47e FUN_63d4a47e  GetSysColor@63d4a4ca
+63d4cb7f FUN_63d4cb7f  GetSysColor@63d4cbfb
+63d4df8d FUN_63d4df8d  GetSysColor@63d4df8f
+63d4dfb8 FUN_63d4dfb8  GetSysColor@63d4e0fc  GetSysColor@63d4e11c  OpenThemeData@63d4dfca  GetThemeColor@63d4dffe  GetThemeColor@63d4e02e  GetThemeColor@63d4e05e  GetThemeColor@63d4e08a
+63d4e1b1 FUN_63d4e1b1  GetSysColor@63d4e1ed  OpenThemeData@63d4e1c5  GetThemeColor@63d4e1e0
+63d4e249 FUN_63d4e249  GetSysColor@63d4e2df  GetSysColor@63d4e300  OpenThemeData@63d4e25c  GetThemeColor@63d4e288  GetThemeColor@63d4e2ae
+63d4e34e FUN_63d4e34e  GetSysColor@63d4e369  GetSysColor@63d4e38f  GetSysColor@63d4e3b0  GetSysColor@63d4e4b3  GetSysColor@63d4e4d4  GetSysColor@63d4e508  OpenThemeData@63d4e3ef  GetThemeColor@63d4e419  GetThemeColor@63d4e43e  GetThemeColor@63d4e467
+63d4e545 FUN_63d4e545  FillRect@63d4e621  FillRect@63d4e635  CreateSolidBrush@63d4e5d5  CreateSolidBrush@63d4e5f2  DrawThemeBackground@63d4e58a  OpenThemeData@63d4e571
+63d4e65d FUN_63d4e65d  FillRect@63d4e723  CreateSolidBrush@63d4e6eb
+63d4e740 FUN_63d4e740  GetSysColor@63d4e797  SetTextColor@63d4e79f
+63d4e84a FUN_63d4e84a  GetSysColor@63d4e96c  GetSysColor@63d4e992  GetSysColor@63d4e9b3  GetSysColor@63d4e9d4  OpenThemeData@63d4e86f  GetThemeColor@63d4e89a  GetThemeColor@63d4e8c8  GetThemeColor@63d4e8f2  GetThemeColor@63d4e918
+63d4e9ff FUN_63d4e9ff  GetSysColor@63d4ea17  GetSysColor@63d4ea3d  GetSysColor@63d4ea67  GetSysColor@63d4ea88
+63d4ead4 FUN_63d4ead4  OpenThemeData@63d4eaf0
+63d50fc3 FUN_63d50fc3  GetSysColor@63d50fd3  GetSysColor@63d50fd9
+63d51030 FUN_63d51030  GetSysColorBrush@63d51085  FillRect@63d51092
+63d514f4 FUN_63d514f4  DrawTextW@63d51551
+63d51915 FUN_63d51915  ExtTextOutW@63d519e2  SetBkColor@63d519d1  SetBkColor@63d519ec
+63d51e75 FUN_63d51e75  GetSysColor@63d51efc  GetSysColor@63d51f29
+63d52504 FUN_63d52504  GetSysColor@63d5251d  GetSysColor@63d5256c
+63d526fc FUN_63d526fc  GetSysColor@63d52705
+63d5277a FUN_63d5277a  GetSysColor@63d527d8  GetSysColor@63d5282e  GetSysColor@63d52851  GetSysColor@63d52858
+63d529fe FUN_63d529fe  OpenThemeData@63d52a18
+63d52a9b FUN_63d52a9b  DrawThemeBackground@63d52b88  OpenThemeData@63d52abf
+63d53096 FUN_63d53096  GetSysColor@63d53187  GetSysColor@63d531ad
+63d531ea FUN_63d531ea  GetSysColor@63d5320e  GetSysColor@63d53234  GetSysColor@63d53273  GetSysColor@63d53288
+63d55327 FUN_63d55327  GetSysColor@63d55344  GetSysColor@63d5536f  GetSysColor@63d553dc  GetSysColor@63d553bb  GetSysColor@63d55412  GetSysColor@63d55438
+63d55465 FUN_63d55465  GetSysColor@63d5548e
+63d55755 FUN_63d55755  GetSysColor@63d559bb
+63d571f1 FUN_63d571f1  DrawTextW@63d572eb
+63d574d9 FUN_63d574d9  DrawTextW@63d57507
+63d58cd4 FUN_63d58cd4  GetSysColor@63d58ce6
+63d5933b FUN_63d5933b  GetSysColor@63d5938c
+63d593ef FUN_63d593ef  GetSysColor@63d59732
+63d6654a FUN_63d6654a  FillRect@63d665d1  CreateSolidBrush@63d66593
+63d665f0 FUN_63d665f0  CreateSolidBrush@63d6662d
+63d66738 FUN_63d66738  DrawTextW@63d66814
+63d83507 FUN_63d83507  DrawTextW@63d8361f
+63d83727 FUN_63d83727  DrawTextW@63d83897
+63d83a11 FUN_63d83a11  DrawTextW@63d83ae7
