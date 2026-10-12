@@ -12,24 +12,24 @@ After:
 
 ## Build it yourself
 
-Get the original installer from the Internet Archive:
+Clone the repository and run:
 
-- [Windows Live Photo Gallery 2008](https://archive.org/details/windows-live-photo-gallery) -
-  `Windows Live Photo Gallery.msi`, SHA-256
-  `c273c4e5f99cc1bab911b4e5373201739e33c00425131cfc16f77351bfb04c32`.
-  The same page has `SQLServerCE31-EN.msi`, the SQL Server Compact 3.1 runtime.
+    .\build.ps1
 
-Then run:
+Nothing else to download: the original Microsoft installer is in `original/`. The script
+checks its SHA-256 and Microsoft signature, unpacks it, applies the patch and prints the
+hashes of the changed files. It needs only PowerShell. The result goes to `out/`; install it
+with `msiexec /i`.
 
-    .\build.ps1 -Msi "C:\path\to\Windows Live Photo Gallery.msi" -Out C:\wlpg-dark
-
-The script checks the installer's SHA-256 and Microsoft signature, unpacks it, applies the
-patch and prints the hashes of the changed files. It needs only PowerShell.
-Install the result with `msiexec /i`. Photo Gallery 2008 also needs SQL Server Compact 3.1.
+The installer comes from the
+[Internet Archive](https://archive.org/details/windows-live-photo-gallery), SHA-256
+`c273c4e5f99cc1bab911b4e5373201739e33c00425131cfc16f77351bfb04c32`. The same page has
+`SQLServerCE31-EN.msi`, the SQL Server Compact 3.1 runtime that Photo Gallery 2008 needs.
 
 ## Files
 
 - `build.ps1` - builds the patched installer from the original MSI
+- `original/` - the original Microsoft installer
 - `release/wlpg-dark-toolbar/` - patched DLLs and `install.cmd`
 - `unpacked/` - original files
 - `scripts/patch_wlpg_toolbar.py` - the patcher

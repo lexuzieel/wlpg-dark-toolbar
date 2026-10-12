@@ -4,8 +4,8 @@ Builds an installer of Windows Live Photo Gallery 2008 with the dark toolbar fro
 original Microsoft MSI.
 
 .DESCRIPTION
-Nothing here is downloaded and no Microsoft file is shipped with this script. You supply the
-original installer; the script
+Nothing is downloaded. The script starts from the original Microsoft installer, by default
+the copy kept in the "original" folder, and
 
   1. checks that it is the expected file (SHA-256) and still carries a valid Microsoft signature,
   2. unpacks it with "msiexec /a" (an administrative image, nothing is installed),
@@ -21,19 +21,26 @@ Works in Windows PowerShell 5.1 and PowerShell 7. Needs no other tools.
 
 .PARAMETER Msi
 Path to the original "Windows Live Photo Gallery.msi", version 12.0.1329.0201.
+Defaults to original\WindowsLivePhotoGallery.msi next to this script.
 
 .PARAMETER Out
-Folder to build into. It must not exist yet.
+Folder to build into. It must not exist yet. Defaults to "out" next to this script.
+
+.EXAMPLE
+.\build.ps1
 
 .EXAMPLE
 .\build.ps1 -Msi "C:\Downloads\Windows Live Photo Gallery.msi" -Out C:\wlpg-dark
 #>
 [CmdletBinding()]
 param(
-    [Parameter(Mandatory)][string]$Msi,
-    [string]$Out = (Join-Path $PSScriptRoot "out")
+    [string]$Msi,
+    [string]$Out
 )
 $ErrorActionPreference = "Stop"
+# Defaults are set here because Windows PowerShell 5.1 has no $PSScriptRoot in param().
+if (-not $Msi) { $Msi = Join-Path $PSScriptRoot "original\WindowsLivePhotoGallery.msi" }
+if (-not $Out) { $Out = Join-Path $PSScriptRoot "out" }
 
 # ---- known values -------------------------------------------------------------------------
 $MsiSha256 = "c273c4e5f99cc1bab911b4e5373201739e33c00425131cfc16f77351bfb04c32"
