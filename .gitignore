@@ -9,3 +9,4 @@ resources/
 unpacked/wmp11/*
 !unpacked/wmp11/wmp11/
 scratch/
+docs/
